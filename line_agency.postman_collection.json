@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "b56f5784-5778-4850-a202-f0cbc56a58f3",
+		"name": "line_agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12649323"
+	},
+	"item": [
+		{
+			"name": "add user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test5",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test5@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add travels",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "test@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "germany: Road to berlin",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Explore the wonders of spain on this exciting journey.",
+							"type": "text"
+						},
+						{
+							"key": "is_public",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "germany-road-to-berlin",
+							"type": "text"
+						},
+						{
+							"key": "number_of_days",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "public-travels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/public-travels",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"public-travels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update travel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "edit test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "desc test",
+							"type": "text"
+						},
+						{
+							"key": "is_public",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "number_of_days",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "edit test",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "description test",
+							"disabled": true
+						},
+						{
+							"key": "is_public",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "number_of_days",
+							"value": "20",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add tours",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "New Tour",
+							"type": "text"
+						},
+						{
+							"key": "starting_date",
+							"value": "2023-08-15",
+							"type": "text"
+						},
+						{
+							"key": "ending_date",
+							"value": "2023-08-20",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1/tours",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1",
+						"tours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter tour",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tours/japan-road-to-wonder?priceFrom=10&priceTo=100000&dateFrom=2023-08-10&dateTo=2023-08-20&sortDesc=false",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tours",
+						"japan-road-to-wonder"
+					],
+					"query": [
+						{
+							"key": "priceFrom",
+							"value": "10"
+						},
+						{
+							"key": "priceTo",
+							"value": "100000"
+						},
+						{
+							"key": "dateFrom",
+							"value": "2023-08-10"
+						},
+						{
+							"key": "dateTo",
+							"value": "2023-08-20"
+						},
+						{
+							"key": "sortDesc",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
